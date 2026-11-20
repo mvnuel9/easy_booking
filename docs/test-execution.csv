@@ -1,0 +1,19 @@
+id,type,resultat,preuve
+AUTH-01,API Django,PASS,accounts.tests.AccountApiTests.test_register_and_obtain_jwt_with_email
+AUTH-02,API Django,PASS,accounts.tests.AccountApiTests.test_rejects_duplicate_email_case_insensitively
+AUTH-03,API Django,PASS,accounts.tests.AccountApiTests.test_rejects_weak_password
+AUTH-04,API Django,PASS,accounts.tests.AccountApiTests.test_register_and_obtain_jwt_with_email
+AUTH-05,API Django,PASS,accounts.tests.AccountApiTests.test_rejects_invalid_login
+AUTH-06,API Django,PASS,rooms.tests.RoomApiTests.test_room_list_requires_authentication
+ROOM-01,API Django,PASS,rooms.tests.RoomApiTests.test_filters_by_minimum_capacity_and_equipment
+ROOM-02,API Django,PASS,rooms.tests.RoomApiTests.test_excludes_rooms_with_overlapping_confirmed_booking
+ROOM-03,API Django,PASS,bookings.tests.BookingApiTests.test_rejects_overlapping_booking_but_allows_adjacent_slot
+ROOM-04,API Django,PASS,rooms.tests.RoomApiTests.test_rejects_invalid_capacity
+BOOK-01,API Django,PASS,bookings.tests.BookingApiTests.test_creates_booking_and_returns_room_details
+BOOK-02,API Django,PASS,bookings.tests.BookingApiTests.test_rejects_overlapping_booking_but_allows_adjacent_slot
+BOOK-03,API Django,PASS,bookings.tests.BookingApiTests.test_rejects_end_before_start_and_past_booking
+BOOK-04,API Django,PASS,bookings.tests.BookingApiTests.test_user_only_sees_and_cancels_their_own_bookings
+BOOK-05,API Django,PASS,bookings.tests.BookingApiTests.test_cancelled_booking_releases_its_time_slot
+UI-01,Vitest,PASS,src/App.test.tsx
+UI-02,Vitest,PASS,src/api.test.ts
+UI-03,Recette navigateur,PASS,Inscription connexion réservation annulation; mobile 312px et desktop 1152px sans débordement
