@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  font-weight: 400;
+  color: #202822;
+  background: #f7f8f5;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 0; min-height: 100vh; }
+button, input, select { font: inherit; }
+button { cursor: pointer; }
+button:disabled { cursor: not-allowed; opacity: .48; }
+
+.field-label { display: flex; flex-direction: column; gap: 7px; color: #69756c; font-size: 12px; font-weight: 600; }
+.field-input { width: 100%; min-width: 0; height: 42px; border: 1px solid #e1e6df; border-radius: 7px; background: #fff; padding: 0 11px; color: #26342b; font-size: 13px; font-weight: 400; outline: none; }
+.field-input:focus { border-color: #69836f; box-shadow: 0 0 0 3px rgb(105 131 111 / 13%); }
+.field-input::placeholder { color: #a0a9a1; }
+.primary-button { display: inline-flex; min-height: 38px; align-items: center; gap: 8px; border: 0; border-radius: 7px; background: #214635; padding: 0 13px; color: #fff; font-size: 13px; font-weight: 600; transition: background .16s ease, transform .16s ease; }
+.primary-button:hover:not(:disabled) { transform: translateY(-1px); background: #183a2b; }
+.icon-button { display: grid; width: 38px; height: 38px; place-items: center; border: 1px solid #e4e8e1; border-radius: 8px; background: white; color: #657269; }
+.icon-button:hover { background: #f4f6f2; color: #25372a; }
+.tab-button { display: inline-flex; min-height: 45px; align-items: center; gap: 8px; border: 0; border-bottom: 2px solid transparent; background: transparent; padding: 0 1px; color: #79837b; font-size: 14px; font-weight: 500; }
+.tab-active { border-color: #315a40; color: #25452f; }
+.tab-count { min-width: 21px; border-radius: 20px; background: #f0f3ef; padding: 2px 6px; color: #718078; font-size: 11px; text-align: center; }
+.room-card { animation: rise-in .38s both; transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease; }
+.room-card:hover { transform: translateY(-2px); border-color: #cbd7ca; box-shadow: 0 12px 28px -22px rgb(31 55 38 / 42%); }
+@keyframes rise-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
